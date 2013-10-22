@@ -14,6 +14,9 @@ public class horarios extends javax.swing.JFrame {
      */
     public horarios() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setTitle("cronogramas ingenieria de sistemas");
     }
 
     /**
@@ -178,7 +181,9 @@ public class horarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
+estructuras obj=new estructuras();
+obj.setVisible(true);
+// TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
