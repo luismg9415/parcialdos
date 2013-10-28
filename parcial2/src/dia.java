@@ -31,6 +31,8 @@ public class dia extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jMenuItem64 = new javax.swing.JMenuItem();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        impresion4 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -167,7 +169,6 @@ public class dia extends javax.swing.JFrame {
         jMenuItem64.setText("jMenuItem64");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(410, 400));
         setResizable(false);
 
         jButton1.setText("Vista Principal");
@@ -176,6 +177,10 @@ public class dia extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        impresion4.setColumns(20);
+        impresion4.setRows(5);
+        jScrollPane1.setViewportView(impresion4);
 
         jMenu1.setText("PULSE AQUI PARA VER EL LISTADO POR CADA DIA");
 
@@ -585,14 +590,21 @@ public class dia extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(303, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 152, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(141, 141, 141)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(345, Short.MAX_VALUE)
+                .addContainerGap(204, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -661,6 +673,7 @@ dispose();
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea impresion4;
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
@@ -785,5 +798,6 @@ dispose();
     private javax.swing.JMenuItem jMenuItem98;
     private javax.swing.JMenuItem jMenuItem99;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
